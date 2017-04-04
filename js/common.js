@@ -1,27 +1,29 @@
+ $(document).ready(function(){
 
 
-var button_contact = document.querySelector('.for_us');
-var close = document.querySelector('.close');
+        $(".owl-carousel").owlCarousel({
+            loop:true,
+            margin:60,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items:1,
+                    stagePadding: 150
+                },
+                1000:{
+                    items:1,
+                    stagePadding: 250
+                }
+            },
 
 
+        });
 
+     $(".owl-carousel .owl-nav .owl-prev").html("<img src='img/back_arrow.png' class='prev_arrow'/>");
+     $(".owl-carousel .owl-nav .owl-next").html("<img src='img/forwardarrow.png' class='next_arrow'/>");
 
-button_contact.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector('.popup_wrap').classList.add('block');
-    document.querySelector('.popup').classList.add('block');
-});
-
-
-close.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector('.popup_wrap').classList.remove('block');
-    document.querySelector('.popup').classList.remove('block');
-});
-
-document.querySelector('.popup_wrap').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector('.popup_wrap').classList.remove('block');
-    document.querySelector('.popup').classList.remove('block');
-});
+ });
 

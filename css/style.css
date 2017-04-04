@@ -4,150 +4,194 @@
     font-family: Verdana,sans-serif;
     font-size: 14px;
     color: white;
-
 }
 
+        /*header*/
+
 header {
-    padding-top: 20px;
-    height: 850px;
-    width: 1440px;
-    background-image: url(../img/bg1.jpg);
+    background-image: url(../img/mat_bg.jpg);
     background-repeat: no-repeat;
     background-position: bottom center;
     position: relative;
-
 }
-    header .wrapper {
-        width: 1000px;
-        margin: auto;
-    }
-    header h1 {
-        font-size: 60px;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        padding-top: 10px;
-        
-    }
-        header h1 span {
-            color: darkred;
-            font-size: 60px;
-        }
+
+
+header h1 {
+    font-size: 70px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+header h1:hover {
+    cursor: pointer;
+}
+
+header h1 span {
+    color: darkred;
+    font-size: 70px;
+}
+
 header .main_menu {
     margin-top: 30px;
-
 }
-    header .main_menu ul {
-        text-align: center;
-    }
-        header .main_menu ul li{
-            display: inline-block;
-            list-style-type: none;
-            padding: 25px 130px;
-            text-transform: uppercase;
-            text-align: center;
-            background: linear-gradient(to top, rgb(0,0,0), rgb(50,50,50));
-            border-bottom: 2px solid darkred;
-            letter-spacing: 2px;
-            font-weight: bold;
-        }
-            header .main_menu ul li:hover{
-                color: darkred;
-                cursor: pointer;
-                background: linear-gradient(to top, rgb(45,45,45), rgb(3,2,2));
-            }
 
-    header .discription {
-        width : 500px;
+header .main_menu .li{
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(to top, rgb(0,0,0), rgb(50,50,50));
+    border-bottom: 2px solid darkred;
+    border-right: 2px solid rgba(204, 204, 204, 0.58);
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding: 20px 0 20px 0;
+}
+header .main_menu .li:last-child {
+    border-right: none;
+}
+header .main_menu .li:hover{
+    color: darkred;
+    cursor: pointer;
+    background: linear-gradient(to top, rgb(45,45,45), rgb(3,2,2));
+}
+
+
+
+        /*main*/
+
+main {
+    background-image: url(../img/mat_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+
+
+    main .dist {
         text-align: center;
         margin-top:120px;
     }
-        header .discription h2 {
+        main .dist h2 {
             font-size: 35px;
             margin: 10px;
             text-transform: uppercase;
         }
-            header .discription h2 span {
+            main .dist h2 span {
                 font-size: 35px;
                 color: darkred;
             }
-        header .discription p {
+        main .dist p {
             font-size: 20px;
             color: #676b72;
         }
 
-        header .discription button {
+        main .dist button {
             margin-top: 20px;
             padding: 15px 34px;
             background: linear-gradient(to top, rgb(60,0,0), rgb(100,0,0));
             border-radius: 20px;
         }
-            header .discription button:hover {
+            main .dist button:hover {
                 background: linear-gradient(to top, rgb(100,0,0), rgb(60,0,0));
                 cursor: pointer;
             }
-            header .discription button a {
+            main .dist button a {
                 text-underline: none;
                 font-size: 15px;
                 text-transform: uppercase;
                 font-weight: bold;
                 text-decoration: none;
+                color: white;
 
+            }
+
+            .star {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                position: relative;
+            }
+            .star img {
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                top: 27px;
+                left: 0;
+
+            }
+
+            .distance {
+                margin-bottom: 100px;
             }
 
 
 
 
+            /* Сatalog */
+
+section.catalog {
+    background-image: url("../img/catalog_bg.jpg");
+}            
+
+    .catalog h2 {
+        font-size: 60px;
+        text-align: center;
+        margin: 70px 0 70px;
+        text-transform: uppercase;
+    }
+
+    .catalog h3 {
+        font-size: 40px;
+        text-align: center;
+        margin: 0px 0 60px;
+        text-transform: uppercase;
+        color: darkred;
+    }
+
+    .man {
+        margin: 100px 0 100px;
+    }
 
 
-.popup_wrap {
-    display: none;
+
+        /*  Owl Carousel */
+
+
+.owl-carousel .owl-stage .active  {
+    opacity: 1;
+}
+
+.owl-theme .owl-nav .owl-prev,
+.owl-theme .owl-nav .owl-next {
+    background-color: rgba(200,200,200,.5);
+    opacity: .9;
     position: absolute;
-    top: 0;
+    top: 25%;
+    padding: 35px 10px;
+    border-radius: 30px;
+}
+.owl-theme .owl-nav .owl-prev:hover,
+.owl-theme .owl-nav .owl-next:hover {
+    background-color: rgba(200,200,200,.7);
+    transform: scale(1.2);
+}
+
+.owl-theme .owl-nav .owl-prev{
     left: 0;
-    height: 850px;
-    width: 1440px;
-    background: rgba(0,0,0,.7);
-    color: black;
-}
-    .popup {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 23%;
-        width: 800px;
-        height: 400px;
-        background: white;
-        margin-top: 200px;
-        background-color: #ccc;
-        z-index: 2;
-    }
-    
-    .popup input {
-        display: block;
-        width: 50%;
-        height: 50px;
-        color: red;
-        margin-bottom: 10px;
-        margin-top: 5px;
-    }
-
-    .popup form {
-        color: black;
-        padding-top: 65px;
-        padding-left: 40px;
-    }
-    
-.block {
-    display: block;
 }
 
+.owl-theme .owl-nav .owl-next{
+    right: 0;
+}
 
+.prev_arrow, .next_arrow {
+    width: 40px;
+    height: 120px;
+}
 
-.close {
-    text-underline: none;
-    text-decoration: none;
-    color: black;
-    font-size: 34px;
-    float: right;
-    padding: 3px 20px 3px 20px;
+.owl-stage .owl-item  {
+    opacity: .4;
 }
